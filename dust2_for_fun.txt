@@ -1,4 +1,4 @@
-// dust2_for_fun.cfg
+// dust2_for_fun.txt
 
 sv_cheats 1  // Enable cheats for custom game modes
 
