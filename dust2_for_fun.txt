@@ -1,0 +1,99 @@
+// dust2_for_fun.cfg
+
+sv_cheats 1  // Enable cheats for custom game modes
+
+// General Settings
+mp_maxrounds 14  // Best of 14 rounds
+mp_roundtime 5   // Set round time to 5 minutes
+mp_buytime 20    // Set buy time for normal buy rounds
+mp_freezetime 5  // Set freeze time between rounds
+mp_respawn_on_death_ct 0
+mp_respawn_on_death_t 0
+mp_swapteams_every_round 0
+r_drawskybox 0
+
+// Setup the round sequence
+alias "round_cycle" "round1"
+
+// Round 1: Night Mode, Knife Only
+alias "round1" "
+   mp_roundtime_defuse 2;
+   mp_weapons_allow_knife_only 1;
+   mp_weapons_allow_pistols 0;
+   mp_weapons_allow_rifles 0;
+   r_drawskybox 0 
+   sv_gravity 800; 
+   say 'Round 1: Night Mode, Knife Only';
+   round_end_hook round2;
+"
+
+// Round 2: Night Mode, Pistols Only
+alias "round2" "
+   mp_roundtime_defuse 2;
+   mp_weapons_allow_knife_only 0;
+   mp_weapons_allow_pistols 1;
+   mp_weapons_allow_rifles 0;
+   sv_skyname sky_csgo_night02; // Set night mode skybox
+   say 'Round 2: Night Mode with Pistols Only';
+   round_end_hook round3;
+"
+
+// Round 3: Night Mode with Normal Buy
+alias "round3" "
+   mp_roundtime_defuse 2;
+   mp_weapons_allow_knife_only 0;
+   mp_weapons_allow_pistols 1;
+   mp_weapons_allow_rifles 1;
+   mp_weapons_allow_grenades 1;
+   mp_weapons_allow_snipers 1;
+   sv_skyname sky_csgo_night02; // Set night mode skybox
+   say 'Round 3: Night Mode with Normal Buy';
+   round_end_hook round4;
+"
+
+// Round 4: Decreased Gravity Zones (A Long, T-Spawn, Mid Doors)
+alias "round4" "
+   sv_gravity 400; 
+   say 'Round 4: Gravity Decreased in A Long, T-Spawn (A side), Mid Doors';
+   round_end_hook round5;
+"
+
+// Round 5: No Bomb, No Defuse, 5 Minutes Deathmatch
+alias "round5" "
+   mp_roundtime_defuse 5;
+   mp_weapons_allow_pistols 1;
+   mp_weapons_allow_rifles 1;
+   mp_weapons_allow_grenades 1;
+   mp_c4timer 0; 
+   mp_defuser_allocation 0;
+   mp_timelimit 5;
+   say 'Round 5: No Bomb, No Defuse, TDM';
+   round_end_hook round6;
+"
+
+// Round 6: Weapons Swap Every 20 Seconds
+alias "round6" "
+   mp_roundtime_defuse 2;
+   mp_weapons_allow_knife_only 0;
+   mp_weapons_allow_pistols 1;
+   mp_weapons_allow_rifles 1;
+   mp_randomspawn 1;
+   say 'Round 6: Weapon Swap every 20 seconds!';
+   // Implement weapon swap logic through plugin or external mod
+   round_end_hook round7;
+"
+
+// Round 7: Shape-Shifters + Night Mode
+alias "round7" "
+   sv_skyname sky_csgo_night02; // Set night mode skybox
+   mp_weapons_allow_knife_only 0;
+   mp_weapons_allow_rifles 1;
+   say 'Round 7: 2 Shape-shifters in each team + Night Mode';
+   // Implement Shape-Shifter logic through plugin or external mod
+   round_end_hook round1;
+"
+
+// Function to end and go to the next round
+alias "round_end_hook" "mp_restartgame 1;"
+
+// Avoid using map command in the config file
