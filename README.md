@@ -15,3 +15,11 @@ This repository contains a custom CS:GO script for a fun mode on the **Dust2** m
 ## How to Use
 
 1. **Enable Cheats**: Some features require cheats enabled in the game.
+2. Copy the script from dust2_for_fun.txt
+3. Go to "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\core\cfg"
+4. Make a new text file, and paste the script copied from dust2_for_fun.txt
+5. Replace the extention name from ".txt" to ".cfg"
+6. Now, the file should read like: "dust2_for_fun.cfg"
+7. Start  Practice mode in CS2 and open Developer Console in game.
+8. Write the following script: "exec dust2_for_fun"
+9. Your Custom game will start..
