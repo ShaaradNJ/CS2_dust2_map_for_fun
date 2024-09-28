@@ -23,3 +23,11 @@ This repository contains a custom CS:GO script for a fun mode on the **Dust2** m
 7. Start  Practice mode in CS2 and open Developer Console in game.
 8. Write the following script: "exec dust2_for_fun"
 9. Your Custom game will start..
+
+## Contribution:
+Contributions are welcome! Please create a pull request or open an issue to discuss what you would like to change.
+
+## Furter Updates:
+1. Complete night mode
+2. Shape Shifting mod
+3. Change of gravity only in specifc zones
