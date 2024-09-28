@@ -34,7 +34,7 @@ alias "round2" "
    mp_weapons_allow_knife_only 0;
    mp_weapons_allow_pistols 1;
    mp_weapons_allow_rifles 0;
-   sv_skyname sky_csgo_night02; // Set night mode skybox
+   sv_skyname sky_csgo_night02; 
    say 'Round 2: Night Mode with Pistols Only';
    round_end_hook round3;
 "
@@ -86,7 +86,7 @@ alias "round6" "
 
 // Round 7: Shape-Shifters + Night Mode
 alias "round7" "
-   sv_skyname sky_csgo_night02; // Set night mode skybox
+   sv_skyname sky_csgo_night02; 
    mp_weapons_allow_knife_only 0;
    mp_weapons_allow_rifles 1;
    say 'Round 7: 2 Shape-shifters in each team + Night Mode';
