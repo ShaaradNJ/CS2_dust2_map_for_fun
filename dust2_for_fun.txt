@@ -97,4 +97,4 @@ alias "round7" "
 // Function to end and go to the next round
 alias "round_end_hook" "mp_restartgame 1;"
 
-// Avoid using map command in the config file
+
