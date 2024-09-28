@@ -3,16 +3,17 @@
 sv_cheats 1  // Enable cheats for custom game modes
 
 // General Settings
-mp_maxrounds 14  // Best of 14 rounds
-mp_roundtime 5   // Set round time to 5 minutes
-mp_buytime 20    // Set buy time for normal buy rounds
-mp_freezetime 5  // Set freeze time between rounds
+mp_maxrounds 14 
+mp_roundtime 5  
+mp_buytime 0    
+mp_freezetime 5  
 mp_respawn_on_death_ct 0
 mp_respawn_on_death_t 0
 mp_swapteams_every_round 0
 r_drawskybox 0
 
 // Setup the round sequence
+
 alias "round_cycle" "round1"
 
 // Round 1: Night Mode, Knife Only
