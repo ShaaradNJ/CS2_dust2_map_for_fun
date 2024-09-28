@@ -80,7 +80,7 @@ alias "round6" "
    mp_weapons_allow_rifles 1;
    mp_randomspawn 1;
    say 'Round 6: Weapon Swap every 20 seconds!';
-   // Implement weapon swap logic through plugin or external mod
+   // to do: Implement weapon swap logic through plugin or external mod
    round_end_hook round7;
 "
 
